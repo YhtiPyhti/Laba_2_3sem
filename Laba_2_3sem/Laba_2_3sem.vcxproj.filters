@@ -21,9 +21,15 @@
     <ClCompile Include="Algebra.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Comparison.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algebra.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Comparison.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
