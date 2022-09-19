@@ -1,16 +1,19 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <fstream>
+
 using namespace std;
 
 struct  Time {
     int hour, min, sec, mlsec;
 
-    friend ostream& operator <<(std::ostream& os, const Time& city) {
+    friend ostream& operator <<(ostream& os, const Time& city) {
 
         os << "In city N now " << city.hour << " hours " << city.min << " minutes  " << city.sec << " seconds " << city.mlsec << " milliseconds\n";
         return os;
     }
+
     friend istream& operator>> (istream& is, Time& dt)
     {
         is >> dt.hour >> dt.min >> dt.sec >> dt.mlsec;
