@@ -10,6 +10,7 @@ int main()
 {
     int n = 0;
     string stroka = "14 05 24 45";
+
     ifstream in("C:\\Users\\Sergei\\Desktop\\Input.txt");
     ofstream fout("C:\\Users\\Sergei\\Desktop\\Output.txt", ios::app);
 
@@ -35,14 +36,24 @@ int main()
         cout << "6) Exit\n";
         cout << "Your Choice: ";
         cin >> n;
+        if (cin.fail()) {
+            cin.clear();
+            cout << "Inncorrect input!!!\n\n";
+            exit(1);
+        }
         system("cls");
         switch (n)
         {
         case 1:
             cout << " 1) File\n 2) Console\n 3) String\n Your Choice: ";
             cin >> n;
+            if (cin.fail()) {
+                cin.clear();
+                cout << "Inncorrect input!!!\n\n";
+                exit(1);
+            }
             if(n == 1){
-                //getline(cin, NewCity);
+                in >> NewCity;
             }
             else if (n == 2) {
                 cin >> NewCity;
@@ -57,6 +68,11 @@ int main()
         case 2:
             cout << " 1) File\n 2) Console\n 3) String\n Your Choice: ";
             cin >> n;
+            if (cin.fail()) {
+                cin.clear();
+                cout << "Inncorrect input!!!\n\n";
+                exit(1);
+            }
             if (n == 1) {
                 fout << "In city N now " << NewCity.hour << " hours " << NewCity.min << " minutes  " << NewCity.sec << " seconds " << NewCity.mlsec << " milliseconds\n";
                 system("notepad C:\\Users\\Sergei\\Desktop\\Output.txt ");
